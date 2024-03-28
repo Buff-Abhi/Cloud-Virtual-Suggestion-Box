@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Abhi's Suggestion Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container text-center">
+      </br> <h1 class="align-items-center justify-content-center">Welcome to Abhi's Suggestion Box!</h1> </br>
+      <form action="" method="post">
+        <input type="text" placeholder="Box Name" name="boxname" value="{{ request.form.boxname }}">
+        <input class="btn btn-primary" type="submit" value="Create">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>

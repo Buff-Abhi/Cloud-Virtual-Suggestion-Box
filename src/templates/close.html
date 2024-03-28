@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Abhi's Suggestion Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container text-center">
+      </br> <h5>URL to enter suggestion</h5>
+      <a href={{ variable }} target="_blank" class="link-info">{{ variable }}</a></br></br>
+        <form action="" method="post">
+          <input class="btn btn-danger" type="submit" value="Close the suggestion box"></input>
+        </form>
+        {% if error %}
+          <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
+    </div>
+  </body>
+</html>

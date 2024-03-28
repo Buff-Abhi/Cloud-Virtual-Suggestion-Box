@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Abhi's Suggestion Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter the feedback</h1>
+      <br>
+      <form action="" method="post">
+        <textarea type="text" rows="10" cols="100" placeholder="Enter Suggestion..." name="message" value="{{ request.form.message }}"></textarea>
+        </br></br>
+        <input class="btn btn-success" type="submit" value="Submit">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
